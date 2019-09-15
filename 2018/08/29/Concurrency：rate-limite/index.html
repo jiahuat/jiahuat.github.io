@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="go,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="##utf8 和 utf16 相互转化 123456789func utf8ToUtf16(b []byte) ([]byte, error) &amp;#123;	return unicode.UTF16(unicode.BigEndian, unicode.IgnoreBOM).NewEncoder().Bytes(b)&amp;#125;func utf16ToUtf8(b []byte) ([]byte,">
+<meta name="description" content="​    使用Go编写并发程序很简单。直接在函数或方法调用前面加上关键字go即可。它们将运行在新的goroutine中。goroutine很轻量，但是如果数据巨大的话，也会耗尽服务器的资源，所以在一些情况下对goroutine进行限制很有必要。下面分享两种方式：  ###一：有缓冲的channel ​    根据有无缓冲区可以分为 无缓冲channel 和有缓冲的channel，对于有缓冲的ch">
+<meta name="keywords" content="go">
 <meta property="og:type" content="article">
-<meta property="og:title" content="utf8转utf16">
-<meta property="og:url" content="http://yoursite.com/2019/03/13/utf8转utf16/index.html">
+<meta property="og:title" content="Concurrency：rate limit">
+<meta property="og:url" content="http://yoursite.com/2018/08/29/Concurrency：rate-limite/index.html">
 <meta property="og:site_name" content="Aloha World">
-<meta property="og:description" content="##utf8 和 utf16 相互转化 123456789func utf8ToUtf16(b []byte) ([]byte, error) &amp;#123;	return unicode.UTF16(unicode.BigEndian, unicode.IgnoreBOM).NewEncoder().Bytes(b)&amp;#125;func utf16ToUtf8(b []byte) ([]byte,">
+<meta property="og:description" content="​    使用Go编写并发程序很简单。直接在函数或方法调用前面加上关键字go即可。它们将运行在新的goroutine中。goroutine很轻量，但是如果数据巨大的话，也会耗尽服务器的资源，所以在一些情况下对goroutine进行限制很有必要。下面分享两种方式：  ###一：有缓冲的channel ​    根据有无缓冲区可以分为 无缓冲channel 和有缓冲的channel，对于有缓冲的ch">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-13T14:40:08.833Z">
+<meta property="og:updated_time" content="2019-09-15T09:51:35.765Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="utf8转utf16">
-<meta name="twitter:description" content="##utf8 和 utf16 相互转化 123456789func utf8ToUtf16(b []byte) ([]byte, error) &amp;#123;	return unicode.UTF16(unicode.BigEndian, unicode.IgnoreBOM).NewEncoder().Bytes(b)&amp;#125;func utf16ToUtf8(b []byte) ([]byte,">
+<meta name="twitter:title" content="Concurrency：rate limit">
+<meta name="twitter:description" content="​    使用Go编写并发程序很简单。直接在函数或方法调用前面加上关键字go即可。它们将运行在新的goroutine中。goroutine很轻量，但是如果数据巨大的话，也会耗尽服务器的资源，所以在一些情况下对goroutine进行限制很有必要。下面分享两种方式：  ###一：有缓冲的channel ​    根据有无缓冲区可以分为 无缓冲channel 和有缓冲的channel，对于有缓冲的ch">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/13/utf8转utf16/">
+  <link rel="canonical" href="http://yoursite.com/2018/08/29/Concurrency：rate-limite/">
 
 
 
 
 
-  <title>utf8转utf16 | Aloha World</title>
+  <title>Concurrency：rate limit | Aloha World</title>
   
 
 
@@ -262,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/13/utf8转utf16/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/29/Concurrency：rate-limite/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jiahua">
@@ -279,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">utf8转utf16</h1>
+          <h1 class="post-title" itemprop="name headline">Concurrency：rate limit</h1>
         
 
         <div class="post-meta">
@@ -291,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-13T22:14:19+08:00">
-                2019-03-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-29T14:20:15+08:00">
+                2018-08-29
               </time>
             
 
@@ -356,8 +357,21 @@
       
 
       
-        <p>##utf8 和 utf16 相互转化</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">utf8ToUtf16</span><span class="params">(b []<span class="keyword">byte</span>)</span> <span class="params">([]<span class="keyword">byte</span>, error)</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> unicode.UTF16(unicode.BigEndian, unicode.IgnoreBOM).NewEncoder().Bytes(b)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">utf16ToUtf8</span><span class="params">(b []<span class="keyword">byte</span>)</span> <span class="params">([]<span class="keyword">byte</span>, error)</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> unicode.UTF16(unicode.BigEndian, unicode.IgnoreBOM).NewDecoder().Bytes(b)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>​    使用Go编写并发程序很简单。直接在函数或方法调用前面加上关键字<em>go</em>即可。它们将运行在新的goroutine中。goroutine很轻量，但是如果数据巨大的话，也会耗尽服务器的资源，所以在一些情况下对goroutine进行限制很有必要。下面分享两种方式：</p>
+</blockquote>
+<p>###一：有缓冲的channel</p>
+<p>​    根据有无缓冲区可以分为 无缓冲channel 和有缓冲的channel，对于有缓冲的channel，在channel放满以前可以持续添加数据，当channel满了后，添加数据会被阻塞， 需要等待channel中有数据被取出，从而channel中有空余时间方可继续添加数据。</p>
+<p>利用缓冲channel的这种特性，我们可以通过channel空间的大小限制goroutine的数量。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sem = <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<p>sem缓冲空间为10，我们可以使用如下代码限制最多10个goroutine：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Serve</span><span class="params">(reqChan <span class="keyword">chan</span> *Request)</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> req := <span class="keyword">range</span> reqChan &#123;</span><br><span class="line">        sem &lt;- <span class="number">1</span></span><br><span class="line">        <span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">(req *Request)</span></span> &#123;</span><br><span class="line">            process(req)</span><br><span class="line">            &lt;-sem</span><br><span class="line">        &#125;(req)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>sem &lt;- 1往sem中放入一个整数1，当process(req)完成后 &lt;-sem 从sem中取出整数1，如果请求速率过快，当sem缓冲空间被占满时， 新来的请求会被阻塞。待process(req)完成，从sem取出整数1后，新的请求方可被接受处理。</p>
+<p>###二：通过限制worker数量</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">process</span><span class="params">(reqChan <span class="keyword">chan</span> *Request)</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> r := <span class="keyword">range</span> reqChan &#123;</span><br><span class="line">        doWork(r)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Serve</span><span class="params">(reqChan <span class="keyword">chan</span> *Request)</span></span> &#123;</span><br><span class="line">    <span class="comment">// Start workers</span></span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">10</span>; i++ &#123;</span><br><span class="line">        <span class="keyword">go</span> process(reqChan)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​    通过限制worker数量为10，当Server执行时，会有10个goroutine被创建取处理请求，每个worker都从reqChan中获取请求数据，进行处理。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>​    方式二在一开始就创建了固定数量的goroutine，避免了方式一的频繁创建和回收goroutine。</p>
+<p>​    </p>
 
       
     </div>
@@ -373,6 +387,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/go/" rel="tag"># go</a>
+          
+        </div>
+      
 
       
       
@@ -382,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/13/RSA加解密及签名验签/" rel="next" title="RSA加解密及签名验签">
-                <i class="fa fa-chevron-left"></i> RSA加解密及签名验签
+              <a href="/2018/08/01/Time/" rel="next" title="Time">
+                <i class="fa fa-chevron-left"></i> Time
               </a>
             
           </div>
@@ -391,6 +411,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/13/RSA加解密及签名验签/" rel="prev" title="RSA加解密及签名验签">
+                RSA加解密及签名验签 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -442,8 +466,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -505,6 +538,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

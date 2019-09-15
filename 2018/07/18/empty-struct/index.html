@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="go,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="##utf8 和 utf16 相互转化 123456789func utf8ToUtf16(b []byte) ([]byte, error) &amp;#123;	return unicode.UTF16(unicode.BigEndian, unicode.IgnoreBOM).NewEncoder().Bytes(b)&amp;#125;func utf16ToUtf8(b []byte) ([]byte,">
+<meta name="description" content="​    空结构体是go结构体的一种，与普通结构体最大的区别就是空结构体不含任何字段。形如： 1var s struct&amp;#123;&amp;#125; 那它有哪些特性，以及用处是什么呢？ 特性：类型大小为0​    go的内建类型: 1234int int8 int16 int32 int64uint uint8 uint16 uint32 uint64 uintptrfloat32 float64 c">
+<meta name="keywords" content="go">
 <meta property="og:type" content="article">
-<meta property="og:title" content="utf8转utf16">
-<meta property="og:url" content="http://yoursite.com/2019/03/13/utf8转utf16/index.html">
+<meta property="og:title" content="empty struct">
+<meta property="og:url" content="http://yoursite.com/2018/07/18/empty-struct/index.html">
 <meta property="og:site_name" content="Aloha World">
-<meta property="og:description" content="##utf8 和 utf16 相互转化 123456789func utf8ToUtf16(b []byte) ([]byte, error) &amp;#123;	return unicode.UTF16(unicode.BigEndian, unicode.IgnoreBOM).NewEncoder().Bytes(b)&amp;#125;func utf16ToUtf8(b []byte) ([]byte,">
+<meta property="og:description" content="​    空结构体是go结构体的一种，与普通结构体最大的区别就是空结构体不含任何字段。形如： 1var s struct&amp;#123;&amp;#125; 那它有哪些特性，以及用处是什么呢？ 特性：类型大小为0​    go的内建类型: 1234int int8 int16 int32 int64uint uint8 uint16 uint32 uint64 uintptrfloat32 float64 c">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-13T14:40:08.833Z">
+<meta property="og:updated_time" content="2019-09-15T09:52:30.311Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="utf8转utf16">
-<meta name="twitter:description" content="##utf8 和 utf16 相互转化 123456789func utf8ToUtf16(b []byte) ([]byte, error) &amp;#123;	return unicode.UTF16(unicode.BigEndian, unicode.IgnoreBOM).NewEncoder().Bytes(b)&amp;#125;func utf16ToUtf8(b []byte) ([]byte,">
+<meta name="twitter:title" content="empty struct">
+<meta name="twitter:description" content="​    空结构体是go结构体的一种，与普通结构体最大的区别就是空结构体不含任何字段。形如： 1var s struct&amp;#123;&amp;#125; 那它有哪些特性，以及用处是什么呢？ 特性：类型大小为0​    go的内建类型: 1234int int8 int16 int32 int64uint uint8 uint16 uint32 uint64 uintptrfloat32 float64 c">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/13/utf8转utf16/">
+  <link rel="canonical" href="http://yoursite.com/2018/07/18/empty-struct/">
 
 
 
 
 
-  <title>utf8转utf16 | Aloha World</title>
+  <title>empty struct | Aloha World</title>
   
 
 
@@ -262,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/13/utf8转utf16/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/18/empty-struct/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jiahua">
@@ -279,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">utf8转utf16</h1>
+          <h1 class="post-title" itemprop="name headline">empty struct</h1>
         
 
         <div class="post-meta">
@@ -291,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-13T22:14:19+08:00">
-                2019-03-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-18T18:05:15+08:00">
+                2018-07-18
               </time>
             
 
@@ -356,8 +357,41 @@
       
 
       
-        <p>##utf8 和 utf16 相互转化</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">utf8ToUtf16</span><span class="params">(b []<span class="keyword">byte</span>)</span> <span class="params">([]<span class="keyword">byte</span>, error)</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> unicode.UTF16(unicode.BigEndian, unicode.IgnoreBOM).NewEncoder().Bytes(b)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">utf16ToUtf8</span><span class="params">(b []<span class="keyword">byte</span>)</span> <span class="params">([]<span class="keyword">byte</span>, error)</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> unicode.UTF16(unicode.BigEndian, unicode.IgnoreBOM).NewDecoder().Bytes(b)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>​    空结构体是<code>go</code>结构体的一种，与普通结构体最大的区别就是空结构体不含任何字段。形如：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s <span class="keyword">struct</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>那它有哪些特性，以及用处是什么呢？</p>
+<h3 id="特性：类型大小为0"><a href="#特性：类型大小为0" class="headerlink" title="特性：类型大小为0"></a>特性：类型大小为0</h3><p>​    <code>go</code>的内建类型:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> <span class="keyword">int8</span> <span class="keyword">int16</span> <span class="keyword">int32</span> <span class="keyword">int64</span></span><br><span class="line"><span class="keyword">uint</span> <span class="keyword">uint8</span> <span class="keyword">uint16</span> <span class="keyword">uint32</span> <span class="keyword">uint64</span> <span class="keyword">uintptr</span></span><br><span class="line"><span class="keyword">float32</span> <span class="keyword">float64</span> <span class="keyword">complex128</span> <span class="keyword">complex64</span></span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">byte</span> <span class="keyword">rune</span> <span class="keyword">string</span> error</span><br></pre></td></tr></table></figure>
+<p>​    我们可以看看普通类型的大小：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i <span class="keyword">int64</span></span><br><span class="line"><span class="keyword">var</span> f <span class="keyword">float64</span></span><br><span class="line"><span class="keyword">var</span> s <span class="keyword">string</span></span><br><span class="line"><span class="keyword">var</span> b <span class="keyword">bool</span></span><br><span class="line">fmt.Println(unsafe.Sizeof(i)) <span class="comment">//8</span></span><br><span class="line">fmt.Println(unsafe.Sizeof(f)) <span class="comment">//8</span></span><br><span class="line">fmt.Println(unsafe.Sizeof(s)) <span class="comment">//16</span></span><br><span class="line">fmt.Println(unsafe.Sizeof(b)) <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://play.golang.org/p/qWQzf8jrzG8" target="_blank" rel="noopener">访问代码</a></p>
+<p>​    可以看到不同类型的大小是不一样的，最小的是<code>bool</code>类型，大小为1，让我们再来看看空结构体的大小。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s <span class="keyword">struct</span>&#123;&#125;</span><br><span class="line">fmt.Println(unsafe.Sizeof(s)) <span class="comment">//0</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://play.golang.org/p/q9wqkx5GuYG" target="_blank" rel="noopener">访问代码</a></p>
+<p>空结构体类型的大小为0，不占用内存空间。</p>
+<h3 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h3><p>​    空结构体只是<code>go</code>结构体的一种特殊情况，所以正常结构体拥有的特性空结构体通用拥有。我们可以利用空结构体类型大小为0的特性，在合适的地方使用可以节约内存。</p>
+<ol>
+<li><p>如果想要使用<code>map</code>来判断某个<code>key</code>是否存在，可以将<code>map</code>定义为这样：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">struct</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>忘<code>chan</code>里面发送一个信号，可以将<code>chan</code>定义为这样：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="keyword">chan</span> <span class="keyword">struct</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>作为方法的接受者:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> S <span class="keyword">struct</span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *S)</span> <span class="title">SomeFun</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//do sth</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="One-more-thing"><a href="#One-more-thing" class="headerlink" title="One more thing"></a>One more thing</h3><p>​    空结构的地址相等。</p>
+<p>​    一般情况：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a, b <span class="keyword">int</span></span><br><span class="line">fmt.Printf(<span class="string">"%p\n"</span>, &amp;a)<span class="comment">//0x414020</span></span><br><span class="line">fmt.Printf(<span class="string">"%p\n"</span>, &amp;b)<span class="comment">//0x414024</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://play.golang.org/p/vvQWWroxbrv" target="_blank" rel="noopener">访问代码</a></p>
+<p>可以看到不同变量分配的地址不同。（注：程序运行地址可能不一样）</p>
+<p>​    让我们看看空结构体的情况：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a, b <span class="keyword">struct</span>&#123;&#125;</span><br><span class="line">fmt.Printf(<span class="string">"%p\n"</span>, &amp;a)<span class="comment">//0x1c4c84</span></span><br><span class="line">fmt.Printf(<span class="string">"%p\n"</span>, &amp;b)<span class="comment">//0x1c4c84</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://play.golang.org/p/9VoP6cAPiE9" target="_blank" rel="noopener">访问代码</a></p>
+<p>可以看到空结构体的地址是相同的。这个也在情理之中，既然空结构内存占用为0，何不给它一个固定的地址呢。这个地址可能和运行环境和<code>go</code>的版本有关。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>​    在合适的地方使用<code>struct{}</code>可以节约内存空间，减少<code>gc</code>压力。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://dave.cheney.net/2014/03/25/the-empty-struct#comment-2815" target="_blank" rel="noopener">The empty struct</a></p>
 
       
     </div>
@@ -373,6 +407,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/go/" rel="tag"># go</a>
+          
+        </div>
+      
 
       
       
@@ -382,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/13/RSA加解密及签名验签/" rel="next" title="RSA加解密及签名验签">
-                <i class="fa fa-chevron-left"></i> RSA加解密及签名验签
+              <a href="/2017/04/12/golang-修改-MongoDB中数组内字段的内容/" rel="next" title="golang 修改 MongoDB中数组内字段的内容">
+                <i class="fa fa-chevron-left"></i> golang 修改 MongoDB中数组内字段的内容
               </a>
             
           </div>
@@ -391,6 +431,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/01/Time/" rel="prev" title="Time">
+                Time <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -442,8 +486,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -505,6 +558,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#特性：类型大小为0"><span class="nav-number">1.</span> <span class="nav-text">特性：类型大小为0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用处"><span class="nav-number">2.</span> <span class="nav-text">用处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#One-more-thing"><span class="nav-number">3.</span> <span class="nav-text">One more thing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

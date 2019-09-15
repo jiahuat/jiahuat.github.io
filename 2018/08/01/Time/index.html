@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="生成私钥公钥 私钥   openssl genrsa -out private.pem 1024   123456789101112131415-----BEGIN RSA PRIVATE KEY-----MIICXAIBAAKBgQDFmjYa+FRSC0GjQCuQXcVqDyu3nMugpLLH9WtcLrVb99+4tuH6PRdpWe406tcHSHRdJFslWpfmyXheUbhsq">
+<meta name="description" content="wiki上对时间的定义：  时间是一种尺度，在物理定义是标量，借着时间，事件发生之先后可以按过去-现在-未来之序列得以确定（时间点），也可以衡量事件持续的期间以及事件之间和间隔长短（时间段）[1][2] 。  ​    时间在程序中应用广泛，比如订单生成的时间，某个监控数据生成的时间，但是由于时区问题，导致在处理时间时容易发生错误。 时区 时区是地球上的区域使用同一个时间定义。世界各个国家位于地">
 <meta name="keywords" content="go">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RSA加解密及签名验签">
-<meta property="og:url" content="http://yoursite.com/2019/03/13/RSA加解密及签名验签/index.html">
+<meta property="og:title" content="Time">
+<meta property="og:url" content="http://yoursite.com/2018/08/01/Time/index.html">
 <meta property="og:site_name" content="Aloha World">
-<meta property="og:description" content="生成私钥公钥 私钥   openssl genrsa -out private.pem 1024   123456789101112131415-----BEGIN RSA PRIVATE KEY-----MIICXAIBAAKBgQDFmjYa+FRSC0GjQCuQXcVqDyu3nMugpLLH9WtcLrVb99+4tuH6PRdpWe406tcHSHRdJFslWpfmyXheUbhsq">
+<meta property="og:description" content="wiki上对时间的定义：  时间是一种尺度，在物理定义是标量，借着时间，事件发生之先后可以按过去-现在-未来之序列得以确定（时间点），也可以衡量事件持续的期间以及事件之间和间隔长短（时间段）[1][2] 。  ​    时间在程序中应用广泛，比如订单生成的时间，某个监控数据生成的时间，但是由于时区问题，导致在处理时间时容易发生错误。 时区 时区是地球上的区域使用同一个时间定义。世界各个国家位于地">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-13T14:40:38.770Z">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565190165&di=4fa510501a0d21898a6a980ba7465c19&imgtype=jpg&er=1&src=http%3A%2F%2Fpic.baike.soso.com%2Fugc%2Fbaikepic2%2F26808%2F20170127173445-69839906.jpg%2F0">
+<meta property="og:updated_time" content="2019-09-15T09:53:09.783Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RSA加解密及签名验签">
-<meta name="twitter:description" content="生成私钥公钥 私钥   openssl genrsa -out private.pem 1024   123456789101112131415-----BEGIN RSA PRIVATE KEY-----MIICXAIBAAKBgQDFmjYa+FRSC0GjQCuQXcVqDyu3nMugpLLH9WtcLrVb99+4tuH6PRdpWe406tcHSHRdJFslWpfmyXheUbhsq">
+<meta name="twitter:title" content="Time">
+<meta name="twitter:description" content="wiki上对时间的定义：  时间是一种尺度，在物理定义是标量，借着时间，事件发生之先后可以按过去-现在-未来之序列得以确定（时间点），也可以衡量事件持续的期间以及事件之间和间隔长短（时间段）[1][2] 。  ​    时间在程序中应用广泛，比如订单生成的时间，某个监控数据生成的时间，但是由于时区问题，导致在处理时间时容易发生错误。 时区 时区是地球上的区域使用同一个时间定义。世界各个国家位于地">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565190165&di=4fa510501a0d21898a6a980ba7465c19&imgtype=jpg&er=1&src=http%3A%2F%2Fpic.baike.soso.com%2Fugc%2Fbaikepic2%2F26808%2F20170127173445-69839906.jpg%2F0">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/13/RSA加解密及签名验签/">
+  <link rel="canonical" href="http://yoursite.com/2018/08/01/Time/">
 
 
 
 
 
-  <title>RSA加解密及签名验签 | Aloha World</title>
+  <title>Time | Aloha World</title>
   
 
 
@@ -263,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/13/RSA加解密及签名验签/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/01/Time/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jiahua">
@@ -280,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RSA加解密及签名验签</h1>
+          <h1 class="post-title" itemprop="name headline">Time</h1>
         
 
         <div class="post-meta">
@@ -292,8 +294,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-13T21:41:41+08:00">
-                2019-03-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-01T12:52:15+08:00">
+                2018-08-01
               </time>
             
 
@@ -357,32 +359,48 @@
       
 
       
-        <h2 id="生成私钥公钥"><a href="#生成私钥公钥" class="headerlink" title="生成私钥公钥"></a>生成私钥公钥</h2><ol>
-<li>私钥</li>
-</ol>
+        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1565190165&amp;di=4fa510501a0d21898a6a980ba7465c19&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fpic.baike.soso.com%2Fugc%2Fbaikepic2%2F26808%2F20170127173445-69839906.jpg%2F0" alt></p>
+<p>wiki上对时间的定义：</p>
 <blockquote>
-<p>openssl genrsa -out private.pem 1024 </p>
+<p><strong>时间</strong>是一种<a href="https://zh.wikipedia.org/wiki/%E5%B0%BA%E5%BA%A6" target="_blank" rel="noopener">尺度</a>，在<a href="https://zh.wikipedia.org/wiki/%E7%89%A9%E7%90%86" target="_blank" rel="noopener">物理</a><a href="https://zh.wikipedia.org/wiki/%E5%AE%9A%E4%B9%89" target="_blank" rel="noopener">定义</a>是<a href="https://zh.wikipedia.org/wiki/%E6%A0%87%E9%87%8F" target="_blank" rel="noopener">标量</a>，借着时间，事件发生之先后可以按<a href="https://zh.wikipedia.org/wiki/%E9%81%8E%E5%8E%BB" target="_blank" rel="noopener">过去</a>-<a href="https://zh.wikipedia.org/wiki/%E7%8F%BE%E5%9C%A8" target="_blank" rel="noopener">现在</a>-<a href="https://zh.wikipedia.org/wiki/%E6%9C%AA%E6%9D%A5" target="_blank" rel="noopener">未来</a>之序列得以确定（时间点），也可以衡量事件持续的期间以及事件之间和间隔长短（时间段）<a href="https://zh.wikipedia.org/wiki/%E6%97%B6%E9%97%B4#cite_note-1" target="_blank" rel="noopener">[1]</a><a href="https://zh.wikipedia.org/wiki/%E6%97%B6%E9%97%B4#cite_note-DefRefs02-2" target="_blank" rel="noopener">[2]</a> 。</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">-----BEGIN RSA PRIVATE KEY-----</span><br><span class="line">MIICXAIBAAKBgQDFmjYa+FRSC0GjQCuQXcVqDyu3nMugpLLH9WtcLrVb99+4tuH6</span><br><span class="line">PRdpWe406tcHSHRdJFslWpfmyXheUbhsqTKsHLpTzyzFlwj8w+cLubaSxilCnZoB</span><br><span class="line">V7mC4qx5bkWUVfDslVjPiVzv3OVZhT/Iy6vhje9wkYmUM1Lfp2ptdmFXqQIDAQAB</span><br><span class="line">AoGBAJltgbEzPBVwFAjz3F99z7joCqPIpPsYppBH6JJs2fiM4DMGHTQ1lyX/48tG</span><br><span class="line">xKstAN0JS5QXYXaa3FEv1qjYPzSxWa6HdsKiOyWDobJWfytWN9gipuKWe+DjfDi1</span><br><span class="line">7NqesSMZs5XAIEQuy4ADTbJzL5jz4huvOPTno1cNRfcLOsvhAkEA9s/FjSsRrnbC</span><br><span class="line">TcKrXujwaju0R/oF1H/WvGui54riy3BAVUMkGgJJbQG7yT5fhjbVfk73M/HCXqAc</span><br><span class="line">PM3H78N1RQJBAMz1dABG79dRBQzPYA/bKHHJPdQI+u6kR4aHNWW6o/XC+wTrGfG0</span><br><span class="line">E7jT+efYiCBJ/gw16ahZKi4BOJeNa+/K5RUCQHqGxSUC56E79dQSu26/p3Kltycw</span><br><span class="line">WSqYWGtr6BCYo2SpklaBoW+ECR2jia0rWNLRcAVngFN6RqshQ0NwSTyfRR0CQHJa</span><br><span class="line">PDdvXJ+gd5XXGfyexSj/I7zqqb59794yD+vLP3F+MPlkhpwhYaOMuXDOkdyaC+Ea</span><br><span class="line">L1ybKvpx+fYslF08saUCQAZ0hJmupj5MfQJs/fl8imYKwT76TiLG3Bha232KzIAr</span><br><span class="line">iv9QmbBFfbuV9LAi9V79C1wYIMkhCl5FT4MXhCNyJRQ=</span><br><span class="line">-----END RSA PRIVATE KEY-----</span><br></pre></td></tr></table></figure>
+<p>​    时间在程序中应用广泛，比如订单生成的时间，某个监控数据生成的时间，但是由于时区问题，导致在处理时间时容易发生错误。</p>
+<h3 id="时区"><a href="#时区" class="headerlink" title="时区"></a>时区</h3><blockquote>
+<p><strong>时区</strong>是<a href="https://zh.wikipedia.org/wiki/%E5%9C%B0%E7%90%83" target="_blank" rel="noopener">地球</a>上的区域使用同一个时间定义。世界各个国家位于<a href="https://zh.wikipedia.org/wiki/%E5%9C%B0%E7%90%83" target="_blank" rel="noopener">地球</a>不同位置上，因此不同国家，特别是东西跨度大的国家日出、日落时间必定有所偏差。这些偏差就是所谓的时差。</p>
+</blockquote>
+<h3 id="UTC"><a href="#UTC" class="headerlink" title="UTC"></a>UTC</h3><p>​    <strong>UTC</strong>表示<strong>协调世界时</strong>，英语：<strong>C</strong>oordinated <strong>U</strong>niversal <strong>T</strong>ime，法语：<strong>T</strong>emps <strong>U</strong>niversel <strong>C</strong>oordonné，简称<strong>UTC</strong>。英语和法语区的人同时希望各自的语言缩写－CUT和TUC能够成为国际标准，结果最后妥协使用<strong>UTC</strong></p>
+<p>北京奥运会开幕式时间是北京时间2008年8月8日晚上8点整，我们改如何表示这个时间呢？</p>
+<p>​    按照<strong>ISO 8601</strong>可以表示为：<strong>2008-08-08T20:00:00+08:00</strong>,这里的<strong>+08:00</strong>表示，其中字母<strong>T</strong>表示，在日期和时间合并时，需要在时间前面加大写字母<strong>T</strong>。或者使用时间<strong>2008-08-08T12:00:00Z</strong>表示，其中字母<strong>Z</strong>是协调世界时中0时区的标志。（UTC时间也被叫做祖鲁时间，因为在北约音标字母中用“Zulu”表示“Z”。）</p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>​    如果应用服务器的时区和数据库的时区不一致，我们无法确定数据库会不会自动转换。</p>
+<p>例如应用服务器使用北京时间，数据库使用UTC时间，如果在2019-07-30 18:00:00创建一个订单，那么存入数据</p>
+<p>库的时间显示为2019-07-30 10:00:00。如果使用2019-07-30 18:00:00这个时间去查询订单，并不能查询到。 一</p>
+<p>些不正确的做法是把当前时间减掉8小时，看似解决了问题，但一旦发生时区变化，就会引发错误。</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>有没有一个”绝对时间”，不管在哪个时区，它的值都是一样的呢？</p>
+<p>答案是有的，那就是<strong>UNIX时间</strong>。它表示从1970年1月1日0时0分0秒起至现在的总秒数。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">localTime := time.Now().Local()</span><br><span class="line">fmt.Println(localTime, localTime.Unix())<span class="comment">//2019-08-01 12:38:05.176506 +0800 CST 1564634285</span></span><br><span class="line">utcTime := time.Now().UTC()</span><br><span class="line">fmt.Println(utcTime, utcTime.Unix())	  <span class="comment">//2019-08-01 04:38:05.176751 +0000 UTC 1564634285</span></span><br></pre></td></tr></table></figure>
+<p>go中常见的时间转换</p>
+<ol>
+<li><p>时间字符串到时间</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str := <span class="string">"2019-08-01 12:42:01"</span></span><br><span class="line">t, _ := time.Parse(<span class="string">"2006-01-02 15:04:05"</span>, str) </span><br><span class="line">fmt.Println(t) <span class="comment">////2019-08-01 12:42:01 +0000 UTC</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <ol start="2">
-<li>公钥</li>
+<li><p>时间到字符串</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">now := time.Now().Local()</span><br><span class="line">fmt.Println(now.Format(time.RFC3339)) 					<span class="comment">//2019-08-01T12:42:01+08:00</span></span><br><span class="line">fmt.Println(now.Format(<span class="string">"2006-01-02 15:04:05"</span>)) 	<span class="comment">//2019-08-01 12:42:01</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<blockquote>
-<p>openssl rsa -in private.pem -pubout -out public.pem</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-----BEGIN PUBLIC KEY-----</span><br><span class="line">MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFmjYa+FRSC0GjQCuQXcVqDyu3</span><br><span class="line">nMugpLLH9WtcLrVb99+4tuH6PRdpWe406tcHSHRdJFslWpfmyXheUbhsqTKsHLpT</span><br><span class="line">zyzFlwj8w+cLubaSxilCnZoBV7mC4qx5bkWUVfDslVjPiVzv3OVZhT/Iy6vhje9w</span><br><span class="line">kYmUM1Lfp2ptdmFXqQIDAQAB</span><br><span class="line">-----END PUBLIC KEY-----</span><br></pre></td></tr></table></figure>
-<p>##加解密</p>
-<p>1.加密</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">encrypt</span><span class="params">(msg []<span class="keyword">byte</span>)</span> <span class="params">([]<span class="keyword">byte</span>, error)</span></span> &#123;</span><br><span class="line">	block, _ := pem.Decode(publicKey)</span><br><span class="line">	<span class="keyword">if</span> block == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span>, errors.New(<span class="string">"public key error"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	pub, err := x509.ParsePKIXPublicKey(block.Bytes)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span>, err</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> rsa.EncryptPKCS1v15(rand.Reader, pub.(*rsa.PublicKey), msg)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.解密</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">decrypt</span><span class="params">(ciphertext []<span class="keyword">byte</span>)</span> <span class="params">([]<span class="keyword">byte</span>, error)</span></span> &#123;</span><br><span class="line">	block, _ := pem.Decode(privateKey)</span><br><span class="line">	<span class="keyword">if</span> block == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span>, errors.New(<span class="string">"private key error"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	privateKey, err := x509.ParsePKCS1PrivateKey(block.Bytes)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span>, err</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> rsa.DecryptPKCS1v15(rand.Reader, privateKey, ciphertext)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>##签名验签</p>
-<p>1.签名</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">signature</span><span class="params">(data []<span class="keyword">byte</span>)</span> <span class="params">([]<span class="keyword">byte</span>, error)</span></span> &#123;</span><br><span class="line">	block, _ := pem.Decode(privateKey)</span><br><span class="line">	<span class="keyword">if</span> block == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span>, errors.New(<span class="string">"public key error"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	privateKey, err := x509.ParsePKCS1PrivateKey(block.Bytes)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span>, err</span><br><span class="line">	&#125;</span><br><span class="line">	h := sha1.New()</span><br><span class="line">	h.Write(data)</span><br><span class="line">	hash := h.Sum(<span class="literal">nil</span>)</span><br><span class="line">	signature, err := rsa.SignPKCS1v15(rand.Reader, privateKey, crypto.SHA1, hash[:])</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span>, err</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> signature, <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.验签</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">verySignatur</span><span class="params">(originalData []<span class="keyword">byte</span>, signData []<span class="keyword">byte</span>)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">	block, _ := pem.Decode(publicKey)</span><br><span class="line">	<span class="keyword">if</span> block == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> errors.New(<span class="string">"public key error"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	pub, err := x509.ParsePKIXPublicKey(block.Bytes)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	hash := sha1.New()</span><br><span class="line">	hash.Write(originalData)</span><br><span class="line">	<span class="keyword">return</span> rsa.VerifyPKCS1v15(pub.(*rsa.PublicKey), crypto.SHA1, hash.Sum(<span class="literal">nil</span>), signData)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>###参考</p>
-<p><a href="http://blog.studygolang.com/2013/01/go%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E4%B9%8Brsa/" target="_blank" rel="noopener">GO加密解密之RSA</a></p>
+<ol start="3">
+<li><p>获取unix</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fmt.Println(time.Now().Unix()) <span class="comment">//1564634957</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="4">
+<li><p>通过unix转换为时间</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fmt.Println(time.Unix(<span class="number">1564634957</span>, <span class="number">0</span>)) <span class="comment">//2019-08-01 12:49:17 +0800 CST</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://zh.wikipedia.org/wiki/%E6%97%B6%E5%8C%BA" target="_blank" rel="noopener">时区</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/UNIX%E6%97%B6%E9%97%B4" target="_blank" rel="noopener">UNIX时间</a></p>
 
       
     </div>
@@ -413,8 +431,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/29/Concurrency：rate-limite/" rel="next" title="Concurrency：rate limit">
-                <i class="fa fa-chevron-left"></i> Concurrency：rate limit
+              <a href="/2018/07/18/empty-struct/" rel="next" title="empty struct">
+                <i class="fa fa-chevron-left"></i> empty struct
               </a>
             
           </div>
@@ -423,8 +441,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/13/utf8转utf16/" rel="prev" title="utf8转utf16">
-                utf8转utf16 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/29/Concurrency：rate-limite/" rel="prev" title="Concurrency：rate limit">
+                Concurrency：rate limit <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -559,7 +577,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#生成私钥公钥"><span class="nav-number">1.</span> <span class="nav-text">生成私钥公钥</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#时区"><span class="nav-number">1.</span> <span class="nav-text">时区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UTC"><span class="nav-number">2.</span> <span class="nav-text">UTC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">3.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法"><span class="nav-number">4.</span> <span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
